@@ -20,7 +20,10 @@ class WorkChart extends StatelessWidget {
           const SizedBox(height: 20),
           Text(
             "TODAYS WORK CHART",
-            style: Theme.of(context).primaryTextTheme.headline6,
+            style: Theme.of(context)
+                .primaryTextTheme
+                .bodyText2
+                .merge(TextStyle(fontSize: 12)),
           ),
           const SizedBox(height: 10),
           CustomDivider(),
@@ -28,15 +31,48 @@ class WorkChart extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              texts(context, "LOGIN ", "08:30 AM"),
-              texts(context, "LOGOUT ", "06:30 PM"),
+              RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: "LOGIN ",
+                      style: Theme.of(context).primaryTextTheme.bodyText2.merge(
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
+                    ),
+                    TextSpan(
+                        text: "08:30 AM",
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6
+                            .merge(TextStyle(fontWeight: FontWeight.bold))),
+                  ],
+                ),
+              ),
+              RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: "LOGOUT ",
+                        style: Theme.of(context)
+                            .primaryTextTheme
+                            .bodyText2
+                            .merge(TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w500))),
+                    TextSpan(
+                      text: "08:30 AM",
+                      style: Theme.of(context).primaryTextTheme.headline6.merge(
+                            TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xffBCBCBE),
+                            ),
+                          ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
           const SizedBox(height: 20),
-          // ProgressSlider(
-          //   start: 0,
-          //   end: 10,
-          // ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -64,7 +100,7 @@ class WorkChart extends StatelessWidget {
           const SizedBox(height: 20),
           Text(
             "FINISHED TASK : 07/10",
-            style: Theme.of(context).primaryTextTheme.headline6,
+            style: Theme.of(context).primaryTextTheme.caption
           ),
           const SizedBox(height: 15),
           Row(
@@ -73,7 +109,7 @@ class WorkChart extends StatelessWidget {
               SideDividers(screenWidth: screenWidth),
               Text(
                 "LUNCH BREAK :01:00 PM - 01:40 PM",
-                style: Theme.of(context).primaryTextTheme.headline6,
+                style: Theme.of(context).primaryTextTheme.caption,
               ),
               const SizedBox(width: 10),
               CustomDotWidget()
@@ -85,7 +121,7 @@ class WorkChart extends StatelessWidget {
             children: [
               Text(
                 "TEA BREAK :01:00 PM - 01:40 PM",
-                style: Theme.of(context).primaryTextTheme.headline6,
+                style: Theme.of(context).primaryTextTheme.caption
               ),
               SideDividers(
                 screenWidth: screenWidth,
@@ -122,21 +158,4 @@ class CustomDotWidget extends StatelessWidget {
       ),
     );
   }
-}
-
-RichText texts(BuildContext context, String title, String time) {
-  return RichText(
-    text: TextSpan(
-      children: <TextSpan>[
-        TextSpan(
-            text: title, style: Theme.of(context).primaryTextTheme.headline6),
-        TextSpan(
-            text: time,
-            style: Theme.of(context)
-                .textTheme
-                .headline6
-                .merge(TextStyle(fontWeight: FontWeight.bold))),
-      ],
-    ),
-  );
 }

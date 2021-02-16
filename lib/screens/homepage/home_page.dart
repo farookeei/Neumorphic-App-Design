@@ -10,19 +10,33 @@ class HomePageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      child: ListView(
-        children: [
-          TopContainer(),
-          const SizedBox(height: 50),
-          WorkChart(),
-          const SizedBox(height: 20),
-          CustomDivider(),
-          const SizedBox(height: 20),
-          LastContainer(),
-        ],
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 400,
+              child: Stack(
+                overflow: Overflow.visible,
+                children: [
+                  TopContainer(),
+                  Positioned(
+                    bottom: -20,
+                    left: 0,
+                    right: 0,
+                    child: WorkChart(),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 40),
+            CustomDivider(),
+            const SizedBox(height: 20),
+            LastContainer(),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }

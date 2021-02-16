@@ -7,8 +7,7 @@ TextTheme textTheme() => TextTheme(
           fontFamily: 'Montserrat',
           color: ColorThemes.darkColor,
           fontWeight: FontWeight.w600),
-      headline6: TextStyle(
-          fontSize: 13, fontFamily: 'Montserrat', color: ColorThemes.darkColor),
+      headline6: TextStyle( fontFamily: 'Montserrat', color: ColorThemes.darkColor),
       bodyText1:
           TextStyle(fontFamily: 'Montserrat', color: ColorThemes.darkColor),
     );

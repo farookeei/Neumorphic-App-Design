@@ -104,10 +104,13 @@ class _OtpScreenState extends State<OtpScreen> {
             ),
             Form(
               key: _formKey,
-              child: CustomPincode(
-                width: screenWidth * 0.9,
-                onChanged: (_val) => _otp = _val,
-                onComplete: onComplete,
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: CustomPincode(
+                  width: double.infinity,
+                  onChanged: (_val) => _otp = _val,
+                  onComplete: onComplete,
+                ),
               ),
             ),
             _resendLoading

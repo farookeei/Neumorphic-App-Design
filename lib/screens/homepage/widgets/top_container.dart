@@ -15,6 +15,7 @@ class TopContainer extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     return Container(
       height: 200,
+      width: double.infinity,
       child: Stack(
         children: [
           Positioned(

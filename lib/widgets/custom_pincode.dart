@@ -23,7 +23,7 @@ class CustomPincode extends StatelessWidget {
     return Container(
       child: Neumorphic(
         margin: EdgeInsets.all(10),
-        padding: EdgeInsets.only(top: 5, left: 5, right: 5),
+        padding: EdgeInsets.only(top: 5, left: 20, right: 20),
         style: neumorphicInStyle(context),
         child: PinCodeTextField(
           onCompleted: onComplete,
@@ -33,16 +33,16 @@ class CustomPincode extends StatelessWidget {
           obscuringCharacter: '*',
           animationType: AnimationType.fade,
           pinTheme: PinTheme(
-            inactiveColor: ColorThemes.secoundaryLightColor,
-            disabledColor: ColorThemes.secoundaryLightColor,
-            activeColor: ColorThemes.secoundaryLightColor,
-            inactiveFillColor: ColorThemes.secoundaryLightColor,
+            inactiveColor: ColorThemes.pinColor,
+            disabledColor: ColorThemes.pinColor,
+            activeColor: ColorThemes.pinColor,
+            inactiveFillColor: ColorThemes.pinColor,
             shape: PinCodeFieldShape.underline,
             fieldHeight: 35,
             fieldWidth: 35,
-            selectedColor: ColorThemes.secoundaryLightColor,
-            selectedFillColor: ColorThemes.secoundaryLightColor,
-            activeFillColor: ColorThemes.secoundaryLightColor,
+            selectedColor: ColorThemes.pinColor,
+            selectedFillColor: ColorThemes.pinColor,
+            activeFillColor: ColorThemes.pinColor,
           ),
           backgroundColor: Theme.of(context).primaryColor,
           cursorColor: Theme.of(context).primaryColor,

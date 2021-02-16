@@ -98,10 +98,8 @@ class WorkChart extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          Text(
-            "FINISHED TASK : 07/10",
-            style: Theme.of(context).primaryTextTheme.caption
-          ),
+          Text("FINISHED TASK : 07/10",
+              style: Theme.of(context).primaryTextTheme.caption),
           const SizedBox(height: 15),
           Row(
             // mainAxisAlignment: MainAxisAlignment.center,
@@ -119,10 +117,8 @@ class WorkChart extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(
-                "TEA BREAK :01:00 PM - 01:40 PM",
-                style: Theme.of(context).primaryTextTheme.caption
-              ),
+              Text("TEA BREAK :01:00 PM - 01:40 PM",
+                  style: Theme.of(context).primaryTextTheme.caption),
               SideDividers(
                 screenWidth: screenWidth,
               ),

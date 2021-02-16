@@ -10,7 +10,7 @@ class ColorThemes {
   static const Color accentColor = Color(0xffFFAF37);
   static const Color secoundaryColor = Color(0xff7C8695);
   static const Color darkColor = Color(0xff193C40);
-  static const Color secoundaryLightColor = Color(0xffC1C1C1);
+  static const Color secoundaryLightColor = Color.fromRGBO(172, 172, 172, 1);
   static const Color pinColor = Color(0x208D8D8E);
 }
 

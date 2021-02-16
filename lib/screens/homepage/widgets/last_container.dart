@@ -17,58 +17,58 @@ class LastContainer extends StatelessWidget {
       child: Neumorphic(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           style: innerStyle(context),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "02 Sep 2020 \n06:00 AM ",
-                    style: Theme.of(context).primaryTextTheme.headline6.merge(
-                        TextStyle(color: Color.fromRGBO(77, 153, 249, 0.52))),
-                  ),
-                  SideDividers(screenWidth: screenwidth),
-                  CustomRoundBtn(
-                    onPressed: () {},
-                    title: "26 °C",
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              Text("Will you Login at 6:45 AM ?",
-                  style: Theme.of(context).primaryTextTheme.headline5),
-              const SizedBox(height: 20),
-              CustomDivider(
-                startspace: 130,
-              ),
-              const SizedBox(height: 30),
-              Stack(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      CustomButton(
-                        text: "Yes I will",
-                        onPressed: () {},
-                        textStyle: Theme.of(context)
-                            .primaryTextTheme
-                            .headline6
-                            .merge(TextStyle(
-                                color: darkblue, fontWeight: FontWeight.bold)),
-                      ),
-                      CustomButton(
-                        text: "No I am on leave",
-                        onPressed: () {},
-                        textStyle: Theme.of(context)
-                            .primaryTextTheme
-                            .headline6
-                            .merge(TextStyle(color: lightblue)),
-                      ),
-                    ],
-                  )
-                ],
-              )
-            ],
+          child: Container(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "02 Sep 2020 \n06:00 AM ",
+                      style: Theme.of(context).primaryTextTheme.headline6.merge(
+                          TextStyle(color: Color.fromRGBO(77, 153, 249, 0.52))),
+                    ),
+                    SideDividers(screenWidth: screenwidth),
+                    CustomRoundBtn(
+                      onPressed: () {},
+                      title: "26 °C",
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Text("Will you Login at 6:45 AM ?",
+                    style: Theme.of(context).primaryTextTheme.headline5),
+                const SizedBox(height: 20),
+                CustomDivider(
+                  startspace: 130,
+                ),
+                const SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    CustomButton(
+                      text: "Yes I will",
+                      onPressed: () {},
+                      textStyle: Theme.of(context)
+                          .primaryTextTheme
+                          .headline6
+                          .merge(TextStyle(
+                              color: darkblue,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12)),
+                    ),
+                    CustomButton(
+                      text: "No I am on leave",
+                      onPressed: () {},
+                      textStyle: Theme.of(context)
+                          .primaryTextTheme
+                          .headline6
+                          .merge(TextStyle(color: lightblue, fontSize: 12)),
+                    ),
+                  ],
+                )
+              ],
+            ),
           )),
     );
   }

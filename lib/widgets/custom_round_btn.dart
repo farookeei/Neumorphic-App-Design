@@ -13,7 +13,7 @@ class CustomRoundBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NeumorphicButton(
-      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       style: NeumorphicStyle(
         boxShape: NeumorphicBoxShape.circle(),
         depth: 10,

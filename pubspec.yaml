@@ -1,0 +1,61 @@
+name: todo_employee
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # icons
+  cupertino_icons: ^1.0.0
+  # base work
+  dio: ^3.0.10
+  get_it: ^5.0.1
+  provider: ^4.3.2+2
+  #database
+  hive: ^1.4.4+1
+  path_provider: ^1.6.21
+  #ui
+  flutter_neumorphic: 3.0.3
+  getwidget: ^1.2.4
+  pin_code_fields: ^6.0.1 
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+   # app icon
+  flutter_launcher_icons: "^0.8.0"
+  # for local databse
+  hive_generator: ^0.8.1
+  build_runner: ^1.10.3
+
+flutter:
+
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Thin.ttf
+          weight: 300
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 800
+        - asset: assets/fonts/Montserrat-ExtraBold.ttf
+          weight: 900
+        - asset: assets/fonts/Montserrat-SemiBoldItalic.ttf
+          weight: 600
+          style: italic

@@ -33,59 +33,10 @@ class TopContainer extends StatelessWidget {
               children: [
                 const SizedBox(height: 30),
                 Text(
-                  'Good morning \n${_userData.firstName}',
+                  'Good morning \n${"_userData.firstName"}',
                   style: Theme.of(context).textTheme.headline5,
                 ),
-
                 const SizedBox(height: 10),
-                // Row(
-                //   children: [
-                //     Container(
-                //       width: screenWidth * 0.7,
-                //       child: Neumorphic(
-                //         style: outerStyle(context),
-                //         child: Padding(
-                //           padding: const EdgeInsets.all(3.0),
-                //           child: Neumorphic(
-                //             style: innerStyle(context),
-                //             child: Padding(
-                //               padding: const EdgeInsets.all(10.0),
-                //               child: Text(
-                //                 'Anything I can help you with?',
-                //                 style: Theme.of(context)
-                //                     .primaryTextTheme
-                //                     .bodyText1
-                //                     .merge(TextStyle(
-                //                         fontSize: 12,
-                //                         fontWeight: FontWeight.w600)),
-                //               ),
-                //             ),
-                //           ),
-                //         ),
-                //       ),
-                //     ),
-                //     const SizedBox(width: 10),
-                //     Container(
-                //       child: Neumorphic(
-                //         style: outerStyle(context),
-                //         child: Padding(
-                //           padding: const EdgeInsets.all(3.0),
-                //           child: Padding(
-                //               padding: const EdgeInsets.all(6.0),
-                //               child: IconButton(
-                //                 padding: EdgeInsets.zero,
-                //                 constraints: BoxConstraints(),
-                //                 icon: Icon(
-                //                   Icons.send,
-                //                   color: Theme.of(context).accentColor,
-                //                 ),
-                //                 onPressed: () {},
-                //               )),
-                //         ),
-                //       ),
-                //     ),
-                //   ],
-                // ),
               ],
             ),
           ),

@@ -22,7 +22,7 @@ class HomePageScreen extends StatelessWidget {
                 children: [
                   TopContainer(),
                   Positioned(
-                    bottom: -20,
+                    bottom: 10,
                     left: 0,
                     right: 0,
                     child: WorkChart(),
@@ -30,10 +30,11 @@ class HomePageScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 10),
             CustomDivider(),
-            const SizedBox(height: 20),
+            const SizedBox(height: 15),
             LastContainer(),
+            const SizedBox(height: 15),
           ],
         ),
       ),

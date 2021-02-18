@@ -56,49 +56,51 @@ class _LoginScreenState extends State<LoginScreen> {
       key: _scaffoldKey,
       body: SafeArea(
         child: Center(
-          child: Form(
-            key: _formKey,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Image.asset("assets/images/login.png"),
-                CustomTextFormFeild(
-                  width: screenWidth * 0.9,
-                  hintText: 'EMPLOYEE ID',
-                  keyboardType: TextInputType.text,
-                  inputFormatters: [LengthLimitingTextInputFormatter(10)],
-                  textStyle: Theme.of(context).primaryTextTheme.bodyText2,
-                  onSaved: (_val) {
-                    _authData["employeeId"] = _val;
-                  },
+          child: SingleChildScrollView(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset("assets/images/login.png"),
+                  CustomTextFormFeild(
+                    width: screenWidth * 0.9,
+                    hintText: 'EMPLOYEE ID',
+                    keyboardType: TextInputType.text,
+                    inputFormatters: [LengthLimitingTextInputFormatter(10)],
+                    textStyle: Theme.of(context).primaryTextTheme.bodyText2,
+                    onSaved: (_val) {
+                      _authData["employeeId"] = _val;
+                    },
 
-                  autoFillHints: [AutofillHints.telephoneNumber],
+                    autoFillHints: [AutofillHints.telephoneNumber],
 
-                  // onFieldSubmitted: onFeildSubmit,
-                ),
-                const SizedBox(height: 20),
-                CustomTextFormFeild(
-                  width: screenWidth * 0.9,
-                  hintText: 'MOBILE NUMBER',
-                  keyboardType: TextInputType.phone,
-                  inputFormatters: [LengthLimitingTextInputFormatter(10)],
-                  textStyle: Theme.of(context).primaryTextTheme.bodyText2,
-                  onSaved: (_val) {
-                    _authData["mobNumber"] = _val;
-                  },
-                  validators: _validators.phoneNumberCheck,
-                  autoFillHints: [AutofillHints.telephoneNumber],
-                  // onFieldSubmitted: onFeildSubmit,
-                ),
-                const SizedBox(height: 20),
-                _isLoading
-                    ? CircularProgressIndicator()
-                    : CustomButton(
-                        text: 'SUBMIT',
-                        textStyle: buttonTextStyle,
-                        onPressed: otpSend,
-                      ),
-              ],
+                    // onFieldSubmitted: onFeildSubmit,
+                  ),
+                  const SizedBox(height: 20),
+                  CustomTextFormFeild(
+                    width: screenWidth * 0.9,
+                    hintText: 'MOBILE NUMBER',
+                    keyboardType: TextInputType.phone,
+                    inputFormatters: [LengthLimitingTextInputFormatter(10)],
+                    textStyle: Theme.of(context).primaryTextTheme.bodyText2,
+                    onSaved: (_val) {
+                      _authData["mobNumber"] = _val;
+                    },
+                    validators: _validators.phoneNumberCheck,
+                    autoFillHints: [AutofillHints.telephoneNumber],
+                    // onFieldSubmitted: onFeildSubmit,
+                  ),
+                  const SizedBox(height: 20),
+                  _isLoading
+                      ? CircularProgressIndicator()
+                      : CustomButton(
+                          text: 'SUBMIT',
+                          textStyle: buttonTextStyle,
+                          onPressed: otpSend,
+                        ),
+                ],
+              ),
             ),
           ),
         ),

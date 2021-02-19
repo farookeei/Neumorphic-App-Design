@@ -50,11 +50,12 @@ class SettingsScreen extends StatelessWidget {
               children: [
                 const SizedBox(width: 50),
                 CircleAvatar(
-                  radius: 30,
+                  radius: 35,
                   child: Image.asset("assets/images/Outline.png"),
                 ),
                 const SizedBox(width: 20),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Harry Thomas",
@@ -99,28 +100,29 @@ class SettingsScreen extends StatelessWidget {
               "Contact address: Mackal House.O Pampady,Kottayam",
               style: Theme.of(context).textTheme.bodyText1,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
             //! contact information
 
             Text(
               "Contact  Information",
               style: Theme.of(context).textTheme.headline6,
             ),
+            const SizedBox(height: 10),
             CustomRichText(
               leftfield: "Alternate number:",
               rightfield: "+91 9946889909",
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             CustomRichText(
               leftfield: "Emergency contact:",
-              rightfield: "+91 9946889909",
+              rightfield: "Arjun Prince",
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             CustomRichText(
               leftfield: "Emergency number:",
               rightfield: "+91 9946889909",
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 10),
             CustomRichText(
               leftfield: "Working hours:",
               rightfield: "5 hours",

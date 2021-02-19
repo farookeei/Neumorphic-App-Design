@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:todo_employee/screens/accountOverview/accountOverview.dart';
 import 'package:todo_employee/screens/dashboard/widgets/add_btn.dart';
 import 'package:todo_employee/screens/service_request/serviceRequestScreen.dart';
 import 'package:todo_employee/screens/settings/settings.dart';
@@ -42,7 +43,10 @@ class BottomNavbar extends StatelessWidget {
                       Container(
                           padding: EdgeInsets.all(8),
                           child: GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                // Navigator.pushNamed(
+                                //     context, AccountOverview.routeName);
+                              },
                               child: Image.asset('assets/images/wallet.png'))),
                       Container(
                           padding: EdgeInsets.all(8),

@@ -6,8 +6,7 @@ TextTheme primaryTextTheme() => TextTheme(
       headline5: TextStyle(
           fontFamily: 'Montserrat', color: ColorThemes.secoundaryColor),
       headline6: TextStyle(
-          fontFamily: 'Montserrat',
-          color: ColorThemes.secoundaryColor),
+          fontFamily: 'Montserrat', color: ColorThemes.secoundaryColor),
       bodyText1: TextStyle(
           fontFamily: 'Montserrat', color: ColorThemes.secoundaryColor),
       bodyText2: TextStyle(

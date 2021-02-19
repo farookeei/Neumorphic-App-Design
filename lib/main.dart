@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_employee/core/providers/auth_provider.dart';
@@ -21,6 +22,10 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return NeumorphicTheme(
       theme: NeumorphicThemeData(
         baseColor: Colors.transparent, //_commonBgColor
@@ -39,7 +44,7 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: themes(),
             routes: routes(),
-            home: ServiceRequestScreen()),
+            home: DashboardScreen()),
       ),
     );
   }

@@ -1,8 +1,6 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:todo_employee/core/themes/themes.dart';
 import 'package:todo_employee/widgets/cstm_divider.dart';
 import 'package:todo_employee/widgets/outer_style.dart';
 import 'package:todo_employee/widgets/sideDividers.dart';
@@ -22,8 +20,8 @@ class WorkChart extends StatelessWidget {
             "TODAYS WORK CHART",
             style: Theme.of(context)
                 .primaryTextTheme
-                .bodyText2
-                .merge(TextStyle(fontSize: 12)),
+                .caption
+                .merge(TextStyle(fontSize: 10)),
           ),
           const SizedBox(height: 10),
           CustomDivider(),
@@ -35,15 +33,15 @@ class WorkChart extends StatelessWidget {
                 text: TextSpan(
                   children: <TextSpan>[
                     TextSpan(
-                      text: "LOGIN ",
+                      text: "LOGIN  ",
                       style: Theme.of(context).primaryTextTheme.bodyText2.merge(
-                          TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
+                          TextStyle(fontSize: 10, fontWeight: FontWeight.w500)),
                     ),
                     TextSpan(
                         text: "08:30 AM",
                         style: Theme.of(context)
                             .textTheme
-                            .headline6
+                            .bodyText1
                             .merge(TextStyle(fontWeight: FontWeight.bold))),
                   ],
                 ),
@@ -52,15 +50,15 @@ class WorkChart extends StatelessWidget {
                 text: TextSpan(
                   children: <TextSpan>[
                     TextSpan(
-                        text: "LOGOUT ",
+                        text: "LOGOUT  ",
                         style: Theme.of(context)
                             .primaryTextTheme
                             .bodyText2
                             .merge(TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w500))),
+                                fontSize: 10, fontWeight: FontWeight.w500))),
                     TextSpan(
                       text: "08:30 AM",
-                      style: Theme.of(context).primaryTextTheme.headline6.merge(
+                      style: Theme.of(context).primaryTextTheme.bodyText1.merge(
                             TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0xffBCBCBE),
@@ -80,17 +78,17 @@ class WorkChart extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                      height: 3,
+                      height: 2,
                       decoration: BoxDecoration(
-                          color: Colors.grey,
+                          color: Colors.black12,
                           borderRadius: BorderRadius.circular(25)),
                       width: screenWidth * 0.5,
-                      child: Text("")),
+                      child: const SizedBox()),
                   Container(
-                    height: 3,
+                    height: 2,
                     width: screenWidth * 0.4,
                     color: Colors.blue,
-                    child: Text(""),
+                    child: const SizedBox(),
                   ),
                 ],
               ),
@@ -104,10 +102,13 @@ class WorkChart extends StatelessWidget {
           Row(
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SideDividers(screenWidth: screenWidth),
+              SideDividers(screenWidth: screenWidth - 30),
               Text(
                 "LUNCH BREAK :01:00 PM - 01:40 PM",
-                style: Theme.of(context).primaryTextTheme.caption,
+                style: Theme.of(context)
+                    .primaryTextTheme
+                    .caption
+                    .merge(TextStyle(fontSize: 10)),
               ),
               const SizedBox(width: 10),
               CustomDotWidget()
@@ -118,7 +119,10 @@ class WorkChart extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text("TEA BREAK :01:00 PM - 01:40 PM",
-                  style: Theme.of(context).primaryTextTheme.caption),
+                  style: Theme.of(context)
+                      .primaryTextTheme
+                      .caption
+                      .merge(TextStyle(fontSize: 10))),
               SideDividers(
                 screenWidth: screenWidth,
               ),
@@ -132,10 +136,6 @@ class WorkChart extends StatelessWidget {
 }
 
 class CustomDotWidget extends StatelessWidget {
-  const CustomDotWidget({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Neumorphic(
@@ -148,7 +148,7 @@ class CustomDotWidget extends StatelessWidget {
         radius: 15,
         backgroundColor: Theme.of(context).primaryColor,
         child: CircleAvatar(
-          radius: 5,
+          radius: 4,
           backgroundColor: Color.fromRGBO(0, 153, 255, 1),
         ),
       ),

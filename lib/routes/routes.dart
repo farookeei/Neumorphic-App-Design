@@ -5,5 +5,7 @@ Map<String, WidgetBuilder> routes() {
   return {
     OtpScreen.routeName: (ctx) => OtpScreen(),
     DashboardScreen.routeName: (ctx) => DashboardScreen(),
+    ServiceRequestScreen.routeName: (ctx) => ServiceRequestScreen(),
+    SettingsScreen.routeName: (ctx) => SettingsScreen(),
   };
 }

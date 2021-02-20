@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_employee/core/models/user_model.dart';
+import 'package:todo_employee/core/providers/auth_provider.dart';
 import 'package:todo_employee/widgets/cstm_divider.dart';
 import 'package:todo_employee/widgets/customBottomNavbar.dart';
 import 'package:todo_employee/widgets/custom_appbar.dart';
@@ -9,8 +12,11 @@ import 'package:todo_employee/widgets/outer_style.dart';
 class SettingsScreen extends StatelessWidget {
   static const routeName = "/settings";
 
+  UserModel _userData;
+
   @override
   Widget build(BuildContext context) {
+    _userData = Provider.of<AuthProvider>(context, listen: false).userData;
     Widget _buildStars(int ratings) {
       String stars = "";
 
@@ -58,7 +64,9 @@ class SettingsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Harry Thomas",
+                      _userData.lastName != null
+                          ? "${_userData.firstName}  ${_userData.lastName}"
+                          : "${_userData.firstName}",
                       style: Theme.of(context)
                           .textTheme
                           .headline6
@@ -66,7 +74,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      "#1234567",
+                      "${_userData.employeeId}",
                       style: Theme.of(context).primaryTextTheme.bodyText1,
                     ),
                     const SizedBox(height: 5),
@@ -92,7 +100,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             Text(
-              "Registered number: +91 9946889909",
+              "Registered number: ${_userData.mobNumber}",
               style: Theme.of(context).textTheme.bodyText1,
             ),
             const SizedBox(height: 5),

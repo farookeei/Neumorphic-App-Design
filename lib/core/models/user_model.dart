@@ -36,8 +36,8 @@ class UserModel {
   final String referalCode;
   @HiveField(13)
   final String token;
-  // @HiveField(14)
-  // UserType userTypeStatus;
+  @HiveField(14)
+  final String employeeId;
   @HiveField(15)
   final String userType;
 
@@ -56,6 +56,7 @@ class UserModel {
     @required this.mobNumber,
     @required this.referalCode,
     @required this.token,
+    @required this.employeeId,
     @required this.userType,
     // @required this.userTypeStatus,
   });
@@ -95,6 +96,7 @@ class UserModel {
       lastName: data['user_details']['name']['last'],
       mobNumber: data['user_details']['phone']['number'],
       referalCode: data['user_details']['referral_code'],
+      employeeId: data['user_details']['employee_id'],
       token: data['token'],
       userType: data['user_details']['user_type'],
     );

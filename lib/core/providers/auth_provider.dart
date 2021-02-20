@@ -116,6 +116,15 @@ class AuthProvider with ChangeNotifier {
     }
   }
 
+  // Future<void> dailyStatus({@required String token}) async {
+
+  //   try{
+  //     final _fetchData = await _dioAPIServices.getAPI(authorization: token)
+  //   }catch(e){
+
+  //   }
+  // }
+
   // Future<void> _otpDataSave(OTPModel data) async {
   //   await _otpDatabase.addData(data);
   // }

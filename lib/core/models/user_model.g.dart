@@ -31,6 +31,7 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
       mobNumber: fields[10] as String,
       referalCode: fields[12] as String,
       token: fields[13] as String,
+      employeeId: fields[14] as String,
       userType: fields[15] as String,
     );
   }
@@ -38,7 +39,7 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
   @override
   void write(BinaryWriter writer, UserModel obj) {
     writer
-      ..writeByte(15)
+      ..writeByte(16)
       ..writeByte(0)
       ..write(obj.userDetail)
       ..writeByte(1)
@@ -67,6 +68,8 @@ class UserModelAdapter extends TypeAdapter<UserModel> {
       ..write(obj.referalCode)
       ..writeByte(13)
       ..write(obj.token)
+      ..writeByte(14)
+      ..write(obj.employeeId)
       ..writeByte(15)
       ..write(obj.userType);
   }

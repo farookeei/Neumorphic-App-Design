@@ -41,22 +41,21 @@ class MyApp extends StatelessWidget {
       child: MultiProvider(
         providers: providers(),
         child: MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
-            theme: themes(),
-            routes: routes(),
-            home: DashboardScreen()),
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: themes(),
+          routes: routes(),
+          home: Consumer<AuthProvider>(
+            builder: (ctx, _authProvider, _) {
+              _authProvider.acessOTPData();
+              _authProvider.acessUserData();
+              return _authProvider.isUserAuthTOHome
+                  ? DashboardScreen()
+                  : LoginScreen();
+            },
+          ),
+        ),
       ),
     );
   }
 }
-
-// Consumer<AuthProvider>(
-//             builder: (ctx, _authProvider, _) {
-//               _authProvider.acessOTPData();
-//               _authProvider.acessUserData();
-//               return _authProvider.isUserAuthTOHome
-//                   ? DashboardScreen()
-//                   : LoginScreen();
-//             },
-//           ),

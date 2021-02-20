@@ -12,6 +12,17 @@ import 'package:todo_employee/widgets/sideDividers.dart';
 class LastContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    String loginBefore;
+
+    List<String> yes = [
+      "Will you Login at 6 :45 AM ?",
+      "Login before $loginBefore 1Km Away",
+      "Preparing your Schedule,Please wait"
+    ];
+
+    List<String> no = [
+      "Take Leave",
+    ];
     final screenwidth = MediaQuery.of(context).size.width;
     return Stack(
       overflow: Overflow.visible,

@@ -32,7 +32,7 @@ class TopContainer extends StatelessWidget {
                 children: [
                   const SizedBox(height: 30),
                   Text(
-                    'Good morning \n$_userData.firstName',
+                    'Good morning \n${_userData.firstName}',
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   const SizedBox(height: 10),

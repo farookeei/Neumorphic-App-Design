@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:todo_employee/core/themes/themes.dart';
+import 'package:todo_employee/screens/allscreen.dart';
 import 'package:todo_employee/widgets/customBottomNavbar.dart';
 import 'package:todo_employee/widgets/custom_btn.dart';
 import 'package:todo_employee/widgets/outer_style.dart';
@@ -15,7 +16,9 @@ class ServiceRequestScreen extends StatelessWidget {
         child: CustomButton(
           verticalPadding: 15,
           text: "REQUEST",
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, ReferAndEarn.routeName);
+          },
           textStyle: TextStyle(color: lightblue, fontWeight: FontWeight.bold),
         ),
       ),

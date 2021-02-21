@@ -8,6 +8,7 @@ Map<String, WidgetBuilder> routes() {
     DashboardScreen.routeName: (ctx) => DashboardScreen(),
     ServiceRequestScreen.routeName: (ctx) => ServiceRequestScreen(),
     SettingsScreen.routeName: (ctx) => SettingsScreen(),
-    AccountOverview.routeName: (ctx) => AccountOverview()
+    AccountOverview.routeName: (ctx) => AccountOverview(),
+    ReferAndEarn.routeName: (ctx) => ReferAndEarn(),
   };
 }

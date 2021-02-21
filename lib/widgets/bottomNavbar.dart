@@ -44,8 +44,8 @@ class BottomNavbar extends StatelessWidget {
                           padding: EdgeInsets.all(8),
                           child: GestureDetector(
                               onTap: () {
-                                // Navigator.pushNamed(
-                                //     context, AccountOverview.routeName);
+                                Navigator.pushNamed(
+                                    context, AccountOverview.routeName);
                               },
                               child: Image.asset('assets/images/wallet.png'))),
                       Container(
@@ -64,7 +64,7 @@ class BottomNavbar extends StatelessWidget {
               ),
             ),
             AddBtn(
-              icon: Icons.add,
+              icon: Icons.call,
               onTap: () {},
             ),
           ],

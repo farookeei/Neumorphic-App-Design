@@ -50,13 +50,16 @@ class ReferAndEarn extends StatelessWidget {
                       style: Theme.of(context).primaryTextTheme.bodyText1,
                     ),
                     const SizedBox(height: 10),
-                    CustomTextFormFeild(
-                      // validators: _validators.nameValidator,
-                      textAlign: TextAlign.left,
-                      textStyle: Theme.of(context)
-                          .primaryTextTheme
-                          .bodyText2
-                          .merge(TextStyle(fontWeight: FontWeight.w500)),
+                    Neumorphic(
+                      style: outerContainerStyle(context, bouderRadius: 5),
+                      child: CustomTextFormFeild(
+                        // validators: _validators.nameValidator,
+                        textAlign: TextAlign.left,
+                        textStyle: Theme.of(context)
+                            .primaryTextTheme
+                            .bodyText2
+                            .merge(TextStyle(fontWeight: FontWeight.w500)),
+                      ),
                     ),
                     const SizedBox(height: 20),
                     Text(
@@ -64,13 +67,16 @@ class ReferAndEarn extends StatelessWidget {
                       style: Theme.of(context).primaryTextTheme.bodyText1,
                     ),
                     const SizedBox(height: 10),
-                    CustomTextFormFeild(
-                      // validators: _validators.nameValidator,
-                      textAlign: TextAlign.left,
-                      textStyle: Theme.of(context)
-                          .primaryTextTheme
-                          .bodyText2
-                          .merge(TextStyle(fontWeight: FontWeight.w500)),
+                    Neumorphic(
+                      style: outerContainerStyle(context, bouderRadius: 5),
+                      child: CustomTextFormFeild(
+                        // validators: _validators.nameValidator,
+                        textAlign: TextAlign.left,
+                        textStyle: Theme.of(context)
+                            .primaryTextTheme
+                            .bodyText2
+                            .merge(TextStyle(fontWeight: FontWeight.w500)),
+                      ),
                     ),
                     const SizedBox(height: 20),
                     Text(
@@ -78,13 +84,16 @@ class ReferAndEarn extends StatelessWidget {
                       style: Theme.of(context).primaryTextTheme.bodyText1,
                     ),
                     const SizedBox(height: 10),
-                    CustomTextFormFeild(
-                      // validators: _validators.nameValidator,
-                      textAlign: TextAlign.left,
-                      textStyle: Theme.of(context)
-                          .primaryTextTheme
-                          .bodyText2
-                          .merge(TextStyle(fontWeight: FontWeight.w500)),
+                    Neumorphic(
+                      style: outerContainerStyle(context, bouderRadius: 5),
+                      child: CustomTextFormFeild(
+                        // validators: _validators.nameValidator,
+                        textAlign: TextAlign.left,
+                        textStyle: Theme.of(context)
+                            .primaryTextTheme
+                            .bodyText2
+                            .merge(TextStyle(fontWeight: FontWeight.w500)),
+                      ),
                     ),
                   ],
                 )),

@@ -5,6 +5,7 @@ import 'package:todo_employee/core/functions/error_handler_func.dart';
 import 'package:todo_employee/core/providers/auth_provider.dart';
 import 'package:todo_employee/core/services/dependecyInjection.dart';
 import 'package:todo_employee/screens/allscreen.dart';
+import 'package:todo_employee/widgets/bottomSiteCard.dart';
 import 'package:todo_employee/widgets/custom_btn.dart';
 import 'package:todo_employee/widgets/custom_textformfeild.dart';
 import 'package:todo_employee/core/validators/validator.dart';
@@ -53,6 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     return Scaffold(
+      bottomNavigationBar: BottomSiteCard(),
       key: _scaffoldKey,
       body: SafeArea(
         child: Center(

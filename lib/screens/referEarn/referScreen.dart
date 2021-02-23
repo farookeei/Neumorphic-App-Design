@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:todo_employee/screens/dashboard/dashboardScreen.dart';
 import 'package:todo_employee/widgets/customBottomNavbar.dart';
 import 'package:todo_employee/widgets/custom_btn.dart';
 import 'package:todo_employee/widgets/custom_round_btn.dart';
@@ -16,6 +17,10 @@ class ReferAndEarn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomBottomNavbar(
+        onTap: () {
+          Navigator.pop(context);
+          Navigator.pushNamed(context, DashboardScreen.routeName);
+        },
         child: SizedBox(),
       ),
       body: SafeArea(
@@ -32,10 +37,11 @@ class ReferAndEarn extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             CustomButton(
+              verticalPadding: 20,
               text: "REFERRAL CODE : Arj8893",
               onPressed: () {},
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             Neumorphic(
               style: outerStyle(context),
               child: Container(
@@ -51,7 +57,7 @@ class ReferAndEarn extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Neumorphic(
-                      style: outerContainerStyle(context, bouderRadius: 5),
+                      style: outerContainerStyle(context, bouderRadius: 10),
                       child: CustomTextFormFeild(
                         // validators: _validators.nameValidator,
                         textAlign: TextAlign.left,
@@ -68,7 +74,7 @@ class ReferAndEarn extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Neumorphic(
-                      style: outerContainerStyle(context, bouderRadius: 5),
+                      style: outerContainerStyle(context, bouderRadius: 10),
                       child: CustomTextFormFeild(
                         // validators: _validators.nameValidator,
                         textAlign: TextAlign.left,
@@ -85,7 +91,7 @@ class ReferAndEarn extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Neumorphic(
-                      style: outerContainerStyle(context, bouderRadius: 5),
+                      style: outerContainerStyle(context, bouderRadius: 10),
                       child: CustomTextFormFeild(
                         // validators: _validators.nameValidator,
                         textAlign: TextAlign.left,
@@ -99,7 +105,7 @@ class ReferAndEarn extends StatelessWidget {
                 )),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             CustomButton(
               verticalPadding: 15,
               text: "SUBMIT",

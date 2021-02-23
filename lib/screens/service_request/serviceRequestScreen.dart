@@ -13,6 +13,9 @@ class ServiceRequestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomBottomNavbar(
+        onTap: () {
+          Navigator.pop(context);
+        },
         child: CustomButton(
           verticalPadding: 15,
           text: "REQUEST",

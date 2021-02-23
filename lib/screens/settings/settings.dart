@@ -36,6 +36,9 @@ class SettingsScreen extends StatelessWidget {
 
     return Scaffold(
       bottomNavigationBar: CustomBottomNavbar(
+        onTap: () {
+          Navigator.pop(context);
+        },
         child: SizedBox(),
       ),
       appBar: customAppBar(),
@@ -65,8 +68,8 @@ class SettingsScreen extends StatelessWidget {
                   children: [
                     Text(
                       _userData.lastName != null
-                          ? "${_userData.firstName}  ${_userData.lastName}"
-                          : "${_userData.firstName}",
+                          ? "{_userData.firstName}  {_userData.lastName}"
+                          : "{_userData.firstName}",
                       style: Theme.of(context)
                           .textTheme
                           .headline6

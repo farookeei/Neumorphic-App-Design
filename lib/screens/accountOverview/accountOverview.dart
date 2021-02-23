@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:todo_employee/screens/referEarn/referScreen.dart';
 import 'package:todo_employee/widgets/customBottomNavbar.dart';
 import 'package:todo_employee/widgets/outerContainerstyle.dart';
 import 'package:todo_employee/widgets/outer_style.dart';
@@ -12,6 +13,9 @@ class AccountOverview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomBottomNavbar(
+        onTap: () {
+          Navigator.pop(context);
+        },
         child: SizedBox(),
       ),
       body: SafeArea(
@@ -64,11 +68,17 @@ class AccountOverview extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
-            Neumorphic(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-              style: outerContainerStyle(context, bouderRadius: 25),
-              child: Text("REFER & EARN",
-                  style: Theme.of(context).primaryTextTheme.bodyText1),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, ReferAndEarn.routeName);
+              },
+              child: Neumorphic(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                style: outerContainerStyle(context, bouderRadius: 25),
+                child: Text("REFER & EARN",
+                    style: Theme.of(context).primaryTextTheme.bodyText1),
+              ),
             ),
             const SizedBox(height: 15),
             Padding(

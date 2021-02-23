@@ -5,5 +5,5 @@ import 'attendance_provider.dart';
 
 List<SingleChildWidget> providers() => [
       ChangeNotifierProvider(create: (_) => AuthProvider()),
-      ChangeNotifierProvider(create: (_) => AttndanceProvider()),
+      // ChangeNotifierProvider(create: (_) => AttndanceProvider()),
     ];

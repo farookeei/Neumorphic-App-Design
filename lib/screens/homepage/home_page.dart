@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:todo_employee/screens/homepage/lastContainerwidgets/last2.dart';
+import 'package:todo_employee/screens/homepage/lastContainerwidgets/last4.dart';
+import 'package:todo_employee/screens/homepage/lastContainerwidgets/last6.dart';
+import 'package:todo_employee/screens/homepage/lastContainerwidgets/last7.dart';
+
 import 'package:todo_employee/screens/homepage/widgets/top_container.dart';
 import 'package:todo_employee/screens/homepage/widgets/work_chart.dart';
 import 'package:todo_employee/widgets/cstm_divider.dart';
@@ -35,8 +40,11 @@ class HomePageScreen extends StatelessWidget {
             const SizedBox(height: 10),
             CustomDivider(),
             const SizedBox(height: 15),
-            LastContainer(),
-            const SizedBox(height: 15),
+            // LastContainer(),
+            // LastContainer4()
+            LastContainer7()
+            // LastContainer2(),
+            // const SizedBox(height: 15),
           ],
         ),
       ),

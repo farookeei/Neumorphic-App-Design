@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:todo_employee/screens/homepage/home_page.dart';
+import 'package:todo_employee/screens/homepage/widgets/last_container.dart';
 import 'package:todo_employee/widgets/bottomNavbar.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -9,8 +10,8 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomePageScreen(),
-      bottomNavigationBar: BottomNavbar(),
+      body: LastContainer(),
+      // bottomNavigationBar: BottomNavbar(),
     );
   }
 }

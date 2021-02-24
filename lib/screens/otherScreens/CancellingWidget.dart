@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:todo_employee/screens/homepage/lastContainerwidgets/last6.dart';
+import 'package:todo_employee/screens/homepage/lastContainerwidgets/last8.dart';
 import 'package:todo_employee/screens/homepage/widgets/top_container.dart';
 import 'package:todo_employee/widgets/customBottomNavbar.dart';
 import 'package:todo_employee/widgets/custom_btn.dart';
@@ -7,6 +9,8 @@ import 'package:todo_employee/widgets/outer_style.dart';
 
 class CancellingWidget extends StatelessWidget {
   const CancellingWidget({Key key}) : super(key: key);
+
+  static const routeName = "/cancel-widget";
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +55,10 @@ class CancellingWidget extends StatelessWidget {
                                 .bodyText1
                                 .merge(TextStyle(fontWeight: FontWeight.w600)),
                             text: "Cancelled by customer",
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, LastContainer6.routeName);
+                            },
                             verticalPadding: 20,
                           ),
                           const SizedBox(height: 20),
@@ -61,14 +68,20 @@ class CancellingWidget extends StatelessWidget {
                                 .bodyText1
                                 .merge(TextStyle(fontWeight: FontWeight.w600)),
                             text: "Cancelled by me",
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, LastContainer6.routeName);
+                            },
                             horizontalPadding: 70,
                             verticalPadding: 20,
                           ),
                           const SizedBox(height: 60),
                           CustomButton(
                             text: "CANCEL",
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                  context, LastContainer8.routeName);
+                            },
                             textStyle: Theme.of(context)
                                 .textTheme
                                 .bodyText1

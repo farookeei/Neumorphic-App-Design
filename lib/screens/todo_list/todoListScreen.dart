@@ -9,6 +9,8 @@ import 'package:todo_employee/widgets/outer_style.dart';
 class TodoListScreen extends StatelessWidget {
   const TodoListScreen({Key key}) : super(key: key);
 
+  static const routeName = "/todoScreen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

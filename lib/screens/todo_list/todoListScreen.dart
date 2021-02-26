@@ -1,5 +1,6 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:todo_employee/core/themes/themes.dart';
+import 'package:todo_employee/screens/homepage/widgets/last_container.dart';
 import 'package:todo_employee/widgets/cstm_divider.dart';
 import 'package:todo_employee/widgets/customBottomNavbar.dart';
 import 'package:todo_employee/widgets/inner_style.dart';
@@ -15,6 +16,9 @@ class TodoListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomBottomNavbar(
+        onTap: () {
+          Navigator.pushReplacementNamed(context, LastContainer.routeName);
+        },
         child: SizedBox(),
       ),
       body: SafeArea(

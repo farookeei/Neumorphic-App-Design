@@ -12,6 +12,7 @@ import 'package:todo_employee/screens/otherScreens/CancellingWidget.dart';
 import 'core/database/database_configs.dart';
 import 'core/services/dependecyInjection.dart';
 import 'env/env_configs.dart';
+import 'screens/homepage/widgets/last_container.dart';
 
 void main() async {
   envConfig();
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
               _authProvider.acessOTPData();
               _authProvider.acessUserData();
               return _authProvider.isUserAuthTOHome
-                  ? DashboardScreen()
+                  ? LastContainer()
                   : LoginScreen();
             },
           ),

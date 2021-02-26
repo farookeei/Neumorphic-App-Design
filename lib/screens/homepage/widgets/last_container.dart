@@ -112,7 +112,7 @@ class _LastContainerState extends State<LastContainer> {
                                         fontWeight: FontWeight.w600))),
                         const SizedBox(height: 20),
                         CustomDivider(startspace: 130),
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 50),
                       ],
                     ),
                   ),

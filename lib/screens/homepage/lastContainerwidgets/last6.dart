@@ -97,7 +97,7 @@ class LastContainer6 extends StatelessWidget {
                 Positioned(
                   bottom: -15,
                   child: Container(
-                    width: screenwidth - 50,
+                    width: screenwidth - 180,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

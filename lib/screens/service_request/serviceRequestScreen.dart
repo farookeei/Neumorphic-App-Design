@@ -20,7 +20,7 @@ class ServiceRequestScreen extends StatelessWidget {
           verticalPadding: 15,
           text: "REQUEST",
           onPressed: () {
-            Navigator.pushNamed(context, ReferAndEarn.routeName);
+            // Navigator.pushNamed(context, ReferAndEarn.routeName);
           },
           textStyle: TextStyle(color: lightblue, fontWeight: FontWeight.bold),
         ),

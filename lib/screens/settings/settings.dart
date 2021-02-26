@@ -68,8 +68,8 @@ class SettingsScreen extends StatelessWidget {
                   children: [
                     Text(
                       _userData.lastName != null
-                          ? "{_userData.firstName}  {_userData.lastName}"
-                          : "{_userData.firstName}",
+                          ? "${_userData.firstName}  ${_userData.lastName}"
+                          : "${_userData.firstName}",
                       style: Theme.of(context)
                           .textTheme
                           .headline6

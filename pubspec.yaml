@@ -24,7 +24,8 @@ dependencies:
   #ui
   flutter_neumorphic: 3.0.3
   getwidget: ^1.2.4
-  pin_code_fields: ^6.0.1 
+  pin_code_fields: ^6.0.1
+  fl_chart: ^0.12.2 
   #clock
   intl: ^0.16.1
 

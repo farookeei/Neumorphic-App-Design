@@ -1,5 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_employee/core/providers/daily_login_provider.dart';
 import 'package:todo_employee/core/themes/themes.dart';
 import 'package:todo_employee/screens/homepage/lastContainerwidgets/last2.dart';
 import 'package:todo_employee/screens/homepage/lastContainerwidgets/last4.dart';
@@ -14,8 +18,27 @@ import 'package:todo_employee/widgets/inner_style.dart';
 import 'package:todo_employee/widgets/outerContainerstyle.dart';
 import 'package:todo_employee/widgets/sideDividers.dart';
 
-class LastContainer extends StatelessWidget {
+class LastContainer extends StatefulWidget {
   static const routeName = "/last-container";
+
+  @override
+  _LastContainerState createState() => _LastContainerState();
+}
+
+class _LastContainerState extends State<LastContainer> {
+  bool _islLoading = false;
+  Future<void> login() async {
+    setState(() {
+      _islLoading = true;
+    });
+    final _dailyLoginProvider =
+        Provider.of<DailyLoginProvider>(context, listen: false);
+    await _dailyLoginProvider.dailyLoginRequest();
+    setState(() => _islLoading = false);
+    if (_dailyLoginProvider.loginstatus) {
+      Navigator.pushNamed(context, LastContainer4.routeName);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,11 +102,14 @@ class LastContainer extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 20),
-                        Text('Will you Login at 10:00am ?',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText1
-                                .merge(TextStyle(fontWeight: FontWeight.w600))),
+                        _islLoading
+                            ? CircularProgressIndicator()
+                            : Text('Will you Login at 10:00am ?',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1
+                                    .merge(TextStyle(
+                                        fontWeight: FontWeight.w600))),
                         const SizedBox(height: 20),
                         CustomDivider(startspace: 130),
                         const SizedBox(height: 30),
@@ -104,8 +130,7 @@ class LastContainer extends StatelessWidget {
                           verticalPadding: 10,
                           text: "Yes, I will",
                           onPressed: () {
-                            Navigator.pushNamed(
-                                context, LastContainer4.routeName);
+                            login();
                           },
                           textStyle: Theme.of(context)
                               .primaryTextTheme

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:todo_employee/screens/accountOverview/widgets/lineChart.dart';
 import 'package:todo_employee/screens/referEarn/referScreen.dart';
 import 'package:todo_employee/widgets/customBottomNavbar.dart';
 import 'package:todo_employee/widgets/outerContainerstyle.dart';
@@ -105,6 +106,30 @@ class AccountOverview extends StatelessWidget {
             ),
             Container(
               height: 300,
+              //  child: LineChartPage()
+
+              // Container(
+              //   width: 80,
+              //   decoration:
+              //       BoxDecoration(borderRadius: BorderRadius.circular(25)),
+              //   child: Container(
+              //     height: 20,
+              //     decoration: BoxDecoration(
+              //         color: Colors.blue,
+              //         borderRadius: BorderRadius.circular(25)),
+              //   ),
+              // )
+
+              //  Container(
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(25),
+              //       // color: Colors.red,
+              //     ),
+              //     width: 80,
+              //     child: FittedBox(
+              //       child: Image.asset("assets/images/tube.png"),
+              //       fit: BoxFit.fill,
+              //     )),
               // color: Colors.red,
             ),
             const SizedBox(

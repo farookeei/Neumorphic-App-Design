@@ -76,8 +76,8 @@ class DioAPIServices extends BaseAPIConfig {
           .request(url, options: Options(method: "POST"), data: _encodeJson)
           .catchError((e) => print(e));
 
-      print(_response.data);
-      print("dds");
+      // print(_response.data);
+      // print("dds");
 
       // final _errorMsg = msgErrorHandle(_response.data);
 

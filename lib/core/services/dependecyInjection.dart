@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:todo_employee/core/database/dailyLogin_databse.dart';
 import 'package:todo_employee/core/database/otp_database.dart';
 import 'package:todo_employee/core/database/user_database.dart';
 import 'package:todo_employee/core/validators/validator.dart';
@@ -12,5 +13,6 @@ void serviceLocators() {
   locator.registerLazySingleton<Validators>(() => Validators());
   locator.registerLazySingleton<OTPDatabase>(() => OTPDatabase());
   locator.registerLazySingleton<UserDatabase>(() => UserDatabase());
+  locator.registerLazySingleton<DailyLoginDatabase>(() => DailyLoginDatabase());
   // locator.registerLazySingleton<UserTypeDatabase>(() => UserTypeDatabase());
 }

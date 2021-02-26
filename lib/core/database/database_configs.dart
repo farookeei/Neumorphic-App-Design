@@ -1,6 +1,8 @@
 import 'package:hive/hive.dart';
 
 import 'package:path_provider/path_provider.dart' as path_Provider;
+import 'package:todo_employee/core/database/dailyLogin_databse.dart';
+import 'package:todo_employee/core/models/daily_work_model.dart';
 import 'package:todo_employee/core/models/otp_model.dart';
 import 'package:todo_employee/core/models/user_details.dart';
 import 'package:todo_employee/core/models/user_email_model.dart';
@@ -17,11 +19,13 @@ hiveInitalSetup() async {
   Hive.registerAdapter(UserDetailsAdapter());
   Hive.registerAdapter(UserEmailModelAdapter());
   Hive.registerAdapter(UserModelAdapter());
+  Hive.registerAdapter(DailyLoginModelAdapter());
   // Hive.registerAdapter(UserTypeAdapter());
 
   Hive.init(appDocumnetDirectory.path);
 
   await Hive.openBox(UserDatabase.boxname);
   await Hive.openBox(OTPDatabase.boxname);
+  await Hive.openBox(DailyLoginDatabase.boxname);
   // await Hive.openBox(UserTypeDatabase.boxname);
 }
